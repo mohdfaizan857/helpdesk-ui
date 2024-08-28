@@ -5,6 +5,7 @@ import bodyParser from "body-parser";
 import createACard from "./controllers/createCard.js";
 import getAllCards from "./controllers/getCards.js";
 import getCardWithID from "./controllers/getSpecificCard.js";
+import cors from "cors";
 
 dotenv.config({
   path: "./.env",
@@ -14,6 +15,7 @@ const PORT = process.env.PORT;
 
 // Middleware to parse JSON request bodies
 app.use(bodyParser.json());
+app.use(cors());
 connectDB();
 
 //Routes
