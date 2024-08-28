@@ -1,0 +1,45 @@
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Two cards per row */
+    gap: 20px;
+    /* Space between the cards */
+    padding: 40px;
+    max-width: 800px;
+    /* Set a maximum width for the card list */
+    margin: 0 auto;
+    /* Center the card list horizontally */
+}
+
+.card {
+    background-color: #f8f9fa;
+    
+    /* Light background color for the cards */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Slight shadow for elevation */
+    transition: transform 0.2s ease;
+    text-align: left;
+    /* Left-align the content inside the card */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    /* Slightly enlarge the card on hover for interactivity */
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 18px;
+    border-bottom: 1px solid #ddd;
+    /* Light underline under the title */
+    padding-bottom: 5px;
+    /* Space between the title and the underline */
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}

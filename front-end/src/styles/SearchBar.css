@@ -1,0 +1,38 @@
+.search-bar-wrapper {
+    position: relative;
+    width: 50%;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    /* Adjust padding to make space for the icon */
+    border: 2px solid #ccc;
+    /* Two-sided border */
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Added shadow for elevation */
+    transition: box-shadow 0.3s ease;
+    /* Smooth transition for shadow changes */
+}
+
+.search-input:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    /* Slightly larger shadow on focus */
+    border-color: #494a4b;
+    /* Optional: change border color on focus */
+}
+
+.search-icon {
+    position: absolute;
+    right: 15px;
+    font-size: 20px;
+    color: #555;
+    cursor: pointer;
+}

@@ -19,6 +19,9 @@ app.use(cors());
 connectDB();
 
 //Routes
+app.get("/", (req, res) => {
+  res.redirect("/cards");
+});
 app.post("/cards", createACard);
 app.get("/cards", getAllCards);
 app.get("/cards/:title", getCardWithID);

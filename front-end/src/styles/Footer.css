@@ -1,0 +1,36 @@
+.footer {
+    display: flex;
+    height:300px;
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: left;
+}
+
+.footer-content {
+    display: flex;
+    width: 75%;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-bottom: 20px;
+}
+
+.footer-section h2 {
+    margin-bottom: 13px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-bottom {
+    width:25%;
+    text-align: left;
+    line-height: 25px;
+    padding-top: 120px;
+}

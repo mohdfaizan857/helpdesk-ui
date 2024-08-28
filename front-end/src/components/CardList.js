@@ -1,11 +1,14 @@
 import React from "react";
-import Card from "./Card";
+import "../styles/cardList.css"; // Add a separate CSS file for CardList styling
 
 const CardList = ({ cards }) => {
   return (
     <div className="card-list">
       {cards.map((card) => (
-        <Card key={card.id} title={card.title} description={card.description} />
+        <div key={card.id} className="card">
+          <h2>{card.title}</h2>
+          <p>{card.description}</p>
+        </div>
       ))}
     </div>
   );

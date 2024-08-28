@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import SearchBar from "./components/SearchBar";
 import CardList from "./components/CardList";
-import "./App.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import "./styles/App.css";
 
 const App = () => {
   const [cards, setCards] = useState([]);
@@ -11,7 +13,7 @@ const App = () => {
   useEffect(() => {
     // Fetch the cards from the backend API
     axios
-      .get("http://localhost:3000/cards")
+      .get("http://localhost:4000/cards")
       .then((response) => {
         setCards(response.data);
       })
@@ -27,11 +29,13 @@ const App = () => {
 
   return (
     <div className="app">
+      <Navbar />
       <header className="header">
         <h1>How can we help?</h1>
         <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       </header>
       <CardList cards={filteredCards} />
+      <Footer />
     </div>
   );
 };
