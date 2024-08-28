@@ -34,3 +34,15 @@
     line-height: 25px;
     padding-top: 120px;
 }
+
+.footer-section h5{
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+.circle {
+    width: 25px;
+    margin-bottom: 15px;
+    background-color: white;
+    border-radius: 35%;
+}

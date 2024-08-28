@@ -1,19 +1,27 @@
 import React from "react";
 import "../styles/Navbar.css"; // Add a separate CSS file for Navbar styling
+import { CgAbstract } from "react-icons/cg";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    navigate("/create-card");
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <img
-          src="https://via.placeholder.com/30"
-          alt="Logo"
-          className="navbar-logo"
-        />
+        <div className="circle">
+          <CgAbstract color="black" fontSize="26px" />
+        </div>
         <span className="navbar-title">Abstract | Help Center</span>
       </div>
       <div className="navbar-actions">
-        <button className="navbar-button">Submit a request</button>
+        <button onClick={handleSubmit} className="navbar-button">
+          Submit a request
+        </button>
       </div>
     </nav>
   );

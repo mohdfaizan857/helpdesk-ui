@@ -9,7 +9,6 @@
 
 .navbar-brand {
     display: flex;
-    align-items: center;
 }
 
 .navbar-logo {
@@ -39,4 +38,14 @@
 
 .navbar-button:hover {
     background-color: #5b5d5f;
+}
+
+.circle{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    height: 25px;
+    margin-right: 5px;
+    background-color: white;
+    border-radius: 35%;
 }

@@ -1,11 +1,11 @@
 .card-list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, auto);
     /* Two cards per row */
     gap: 20px;
     /* Space between the cards */
     padding: 40px;
-    max-width: 800px;
+    max-width: 1000px;
     /* Set a maximum width for the card list */
     margin: 0 auto;
     /* Center the card list horizontally */
@@ -13,10 +13,10 @@
 
 .card {
     background-color: #f8f9fa;
-    
     /* Light background color for the cards */
     border: 1px solid #ddd;
     border-radius: 5px;
+    width: 100%;
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     /* Slight shadow for elevation */
