@@ -7,21 +7,21 @@ import getAllCards from "./controllers/getCards.js";
 import getCardWithID from "./controllers/getSpecificCard.js";
 import cors from "cors";
 
+//configurtion setup of .env file
 dotenv.config({
   path: "./.env",
 });
+
 const app = express();
 const PORT = process.env.PORT;
 
-// Middleware to parse JSON request bodies
+// Middlewares
 app.use(bodyParser.json());
 app.use(cors());
+
 connectDB();
 
 //Routes
-app.get("/", (req, res) => {
-  res.redirect("/cards");
-});
 app.post("/cards", createACard);
 app.get("/cards", getAllCards);
 app.get("/cards/:title", getCardWithID);

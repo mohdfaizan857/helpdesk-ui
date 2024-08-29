@@ -9,32 +9,40 @@ import "../styles/App.css";
 const Home = () => {
   const [cards, setCards] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
+  const [error, setError] = useState("");
 
   useEffect(() => {
-    // Fetch the cards from the backend API
+    // Fetch the initial set of cards from the backend API
     axios
       .get("http://localhost:4000/cards")
       .then((response) => {
+        console.log(response.data);
         setCards(response.data);
+        setError(""); // Reset error when fetching initial data
       })
       .catch((error) => {
         console.error("Error fetching cards:", error);
+        setError("Unable to fetch cards at the moment.");
       });
   }, []);
-
-  // Filter cards based on the search query
-  const filteredCards = cards.filter((card) =>
-    card.title.toLowerCase().includes(searchQuery.toLowerCase())
-  );
 
   return (
     <div className="app">
       <Navbar />
       <header className="header">
         <h1>How can we help?</h1>
-        <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+        <SearchBar
+          searchQuery={searchQuery}
+          setSearchQuery={setSearchQuery}
+          setCards={setCards}
+          setError={setError}
+        />
       </header>
-      <CardList cards={filteredCards} />
+      {error ? (
+        <p className="error">{error}</p>
+      ) : (
+        <CardList cards={cards.slice(0, 6)} />
+      )}
       <Footer />
     </div>
   );

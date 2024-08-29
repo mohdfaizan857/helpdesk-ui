@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .form-container {
@@ -10,7 +10,7 @@ body {
     background: #f0f2f5;
 }
 
-.stylish-form {
+.main-form {
     background: #ffffff;
     padding: 40px;
     border-radius: 10px;
@@ -19,7 +19,7 @@ body {
     max-width: 100%;
 }
 
-.stylish-form h2 {
+.main-form h2 {
     margin-bottom: 20px;
     color: #333;
     text-align: center;

@@ -1,7 +1,10 @@
 import React from "react";
-import "../styles/cardList.css"; // Add a separate CSS file for CardList styling
+import "../styles/cardList.css";
 
 const CardList = ({ cards }) => {
+  if (!cards || cards.length === 0) {
+    return <p>No cards to display.</p>; // Handle the case when there are no cards
+  }
   return (
     <div className="card-list">
       {cards.map((card) => (

@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Navbar.css"; // Add a separate CSS file for Navbar styling
+import "../styles/Navbar.css";
 import { CgAbstract } from "react-icons/cg";
 import { useNavigate } from "react-router-dom";
 
